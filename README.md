@@ -58,6 +58,14 @@
     </tbody>
   </table>
 
+  <h2>Importante: Métodos úteis que não fazem parte do RegExp</h2>
+  <p>Existem métodos auxiliares de <code>String</code> que costumamos usar junto com RegExp, mas eles <strong>não pertencem ao objeto RegExp</strong>:</p>
+  <ul>
+    <li><code>.trim()</code> – Remove espaços no início e fim da string.</li>
+    <li><code>.toLowerCase()</code> / <code>.toUpperCase()</code> – Transforma todos os caracteres para minúsculo ou maiúsculo.</li>
+    <li><code>.includes()</code> – Verifica se uma string contém outra.</li>
+  </ul>
+
   <h2>Estrutura Básica</h2>
   <p><code>/expressao/modificadores</code></p>
   <ul>
@@ -115,7 +123,7 @@
   </ul>
 
   <h2>Exemplo com JavaScript</h2>
-  <pre><code>const nome = "Albéres";
+  <pre><code>const nome = "   Albéres   ".trim();
 const apenasLetras = /^[a-zA-Z\s]+$/;
 
 console.log(apenasLetras.test(nome)); // true</code></pre>
